@@ -77,9 +77,8 @@ public class BadIOGUI {
         readButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent ignored) {
-                final Path path = Path.of(PATH);
                 try {
-                    System.out.println(Files.readString(path, StandardCharsets.UTF_8)); //NOPMD
+                    System.out.println(Files.readString(Path.of(PATH), StandardCharsets.UTF_8)); //NOPMD: beacuse this will cause error in any case
                 } catch (final IOException e) {
                     JOptionPane.showMessageDialog(frame, e, "Error", JOptionPane.ERROR_MESSAGE);
                     e.printStackTrace(); // NOPMD: allowed as this is just an exercise
