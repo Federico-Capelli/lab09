@@ -18,6 +18,9 @@ public final class SimpleGUI {
     private static final int PROPORTION = 5;
     private final JFrame frame = new JFrame("Simple GUI");
 
+    /**
+     * 
+     */
     public SimpleGUI() {
         final JPanel panel = new JPanel(new BorderLayout());
         final JTextArea textArea = new JTextArea();
@@ -37,6 +40,9 @@ public final class SimpleGUI {
         frame.setVisible(true);
     }
 
+    /**
+     * @param args not used
+     */
     public static void main(final String[] args) {
         new SimpleGUI().display();
     }
